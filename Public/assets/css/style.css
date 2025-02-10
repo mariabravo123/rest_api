@@ -1,0 +1,264 @@
+/* Consistent appearance across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* HERE IS THE MENU */
+  /* Styling for the main menu bar */
+  .menu {
+    background-color: aqua; /* Background color of the menu */
+    height: fit-content;
+    display: flex;
+  }
+  
+  /* Container holding the logo and hamburger menu */
+  .menu-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #293d64;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  /* The styling the logo image */
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+  
+  .logo img {
+    width: 100%;
+    margin-top: 19px;
+  }
+  
+  /* Here is my hamburger icon for mobile navigation */
+  .hamburger {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* HERO */
+  /* Hero section with background image and center alignment for content */
+  .hero {
+    height: 100vh;
+    background-image: url(/assets/images/jorge-fernandez-salas-ChSZETOal-I-unsplash.jpg); /* Background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Content container within the hero section */
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(5px); /* This is to add blur effect */
+    background-color: rgba(255, 255, 255, 0.7); 
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Styling for the hero title */
+  .hero-title {
+    color: #200e3b;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "Roboto", serif;
+    margin-bottom: 9px;
+  }
+  
+  /* Styling for the hero subtitle */
+  .hero-subtitle {
+    color: #200e3b;
+    font-size: 24px;
+    font-family: "Roboto", serif;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the search form */
+  .search-form {
+    width: 100%;
+  }
+  
+  /* Input field styling for word search */
+  .search-form input {
+    width: 100%;
+    max-width: 280px;
+    height: 40px;
+    border: 1px solid #d7d8db;
+    border-radius: 4px;
+    background-color: #f7f8fa;
+    font-size: 14px;
+    padding-left: 10px;
+  }
+  
+  /* here is the button styling for the search action */
+  .search-form button {
+    width: 100%;
+    max-width: 120px;
+    height: 40px;
+    border: 1px solid #d7d8db;
+    border-radius: 4px;
+    background-color: #293d64;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* Button hover effect */
+  .search-form button:hover {
+    background-color: #5e6b94;
+  }
+  
+  /* MY DEFINITIONS */
+  /* Styling for the definition display section */
+  #definition {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 21px;
+  }
+  
+  #definition h3 {
+    font-family: "Roboto", serif;
+    font-size: 24px;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  
+  /* Paragraph styling for definitions */
+  #definition p {
+    font-family: "Roboto", serif;
+    font-size: 14px;
+    margin-top: 7px;
+    text-align: left;
+  }
+  
+  /* MY MEDIA QUERIES */
+  /* Media queries for responsive design adjustments */
+  
+  /* For tablet screens and larger */
+  @media (min-width: 768px) {
+    .menu-container {
+      padding: 15px 40px;
+      height: 67px;
+    }
+  
+    .logo {
+      width: 200px;
+    }
+  
+    .hamburger {
+      font-size: 28px;
+    }
+  
+    .hero {
+      height: 90vh;
+    }
+  
+    .hero-content {
+      width: 70%;
+      padding: 30px;
+    }
+  
+    .hero-title {
+      font-size: 48px;
+    }
+  
+    .search-form input {
+      max-width: 350px;
+      height: 50px;
+      font-size: 16px;
+    }
+  
+    .search-form button {
+      max-width: 100px;
+      height: 50px;
+    }
+  
+    #definition {
+      margin: 0 28px;
+    }
+  }
+  
+  /* ---> For larger desktop screens */
+  @media (min-width: 1024px) {
+    .logo {
+      width: 250px;
+    }
+  
+    .logo img {
+      width: 81%;
+      margin-top: 25px;
+    }
+  
+    .hero-content {
+      width: 67%;
+      padding: 40px;
+    }
+  
+    .hero-title {
+      font-size: 60px;
+    }
+  
+    .search-form input {
+      max-width: 380px;
+    }
+  
+    .search-form input {
+      width: 380px;
+      height: 50px;
+      font-size: 16px;
+    }
+  
+    #definition {
+      margin: 0 74px;
+    }
+  }
+  
+  /* ----> For very large desktop screens */
+  @media (min-width: 1200px) {
+    .logo {
+      width: 250px;
+    }
+  
+    .logo img {
+      width: 81%;
+      margin-top: 25px;
+    }
+  
+    .hero-content {
+      width: 50%;
+      padding: 40px;
+    }
+  
+    .hero-title {
+      font-size: 60px;
+    }
+  
+    .search-form input {
+      max-width: 380px;
+    }
+  
+    .search-form input {
+      width: 650px;
+      height: 50px;
+      font-size: 16px;
+    }
+    #definition {
+      margin: 0 29px;
+    }
+  }
+  

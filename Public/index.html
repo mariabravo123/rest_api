@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INM 420 - Rest API</title>
+
+    <!-- Content Security Policy (CSP) adjusted to allow external connections to the dictionary API -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self'; 
+        connect-src 'self' https://www.dictionaryapi.com; 
+        style-src 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com; 
+        style-src-elem 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com;
+        script-src 'self';">
+
+    <!-- Linking to custom stylesheet for main design -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- CSS Reset from external CDN to ensure consistent styling across browsers -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css" />
+
+    <!-- Google Fonts to use 'Roboto' for the page typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header with the main menu -->
+    <header class="menu">
+        <nav class="menu-container">
+            <!-- Logo of the page -->
+            <div class="logo"><img src="/assets/images/Logo.png" alt="Logo"></div>
+            <!-- Hamburger menu icon for mobile view -->
+            <div class="hamburger">☰</div>
+        </nav>
+    </header>
+
+    <!-- Main section with hero image and search form -->
+    <main class="hero">
+        <section class="hero-content">
+            <!-- Page title and subtitle for user guidance -->
+            <h1 class="hero-title">Welcome to Spanglish</h1>
+            <h2 class="hero-subtitle">Enter any word in English to see it in Spanish!</h2>
+            <!-- Search form for users to input words -->
+            <form class="search-form">
+                <input type="text" id="word" placeholder="Enter a word">
+                <button type="button" id="searchButton">Search</button>
+                <div id="definition"></div>
+            </form>
+        </section>
+    </main>
+    
+
+    <!-- Linking to the JavaScript file for interactive functionality -->
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>
